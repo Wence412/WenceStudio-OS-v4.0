@@ -1,0 +1,40 @@
+system_record:
+  asset_id: "WS-LEARN-AGT-001"
+  title: "Training Needs Analysis Agent"
+  version: "0.1.0"
+  implementation_status: "specification_only"
+  listing_status: "INTERNAL_ONLY"
+  owner: "WenceStudio Governance"
+  reviewer: "Named domain owner required before release"
+  system_type: "agent"
+  os_domain: "Knowledge OS"
+  target_user: "L&D leaders and training coordinators"
+  trigger: "manual"
+  risk_tier: "high"
+  data_classification: "confidential"
+  purpose: "Provide a governed, reviewable operating capability within Knowledge OS."
+  inputs:
+  - "Approved performance data"
+  - "Incident patterns"
+  - "Learner feedback"
+  - "Business requirements"
+  outputs:
+  - "Needs-analysis brief"
+  - "Prioritized performance gaps"
+  - "Evidence and assumptions log"
+  external_actions: []
+  human_approval_points:
+  - "Approve data use"
+  - "Approve recommendations before distribution"
+  prohibited_uses:
+  - "Unapproved handling of confidential data"
+  - "Employee performance decisions"
+  - "Autonomous distribution"
+  validation_criteria:
+  - "Data-minimization check"
+  - "Evidence traceability"
+  - "Training-owner review"
+  dependencies:
+  - "Approved operating context and current source materials"
+  - "Human reviewer with domain accountability"
+  release_condition: "A named owner confirms validation evidence and changes listing status through the Exchange contribution workflow."
