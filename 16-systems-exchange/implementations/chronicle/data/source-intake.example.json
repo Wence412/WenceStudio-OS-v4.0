@@ -1,0 +1,16 @@
+{
+  "topic_priorities": ["AI governance", "L&D strategy"],
+  "sources": [
+    {
+      "id": "SRC-001",
+      "title": "Example primary announcement",
+      "url": "https://example.com/announcement",
+      "publisher": "Example Organization",
+      "published_on": "2026-08-20",
+      "category": "AI governance",
+      "summary": "Replace this with a factual source summary.",
+      "primary_source": true,
+      "editorial_relevance": "high"
+    }
+  ]
+}
