@@ -26,7 +26,8 @@ gate_record:
   score: 0
   critical_failures:
     - "Retention and deletion control is absent"
-    - "Failure and out-of-scope test results are absent"
+    - "Retention and deletion control is absent"
+    - "Rollback test result is absent"
   residual_risks:
     - "Draft may overstate supplied evidence if editorial review is bypassed"
   evidence:
@@ -60,7 +61,7 @@ gate_record:
       tested_on: null
     - control_id: "G14"
       status: "partial"
-      artifact: "Normal-case real-input test passed. Boundary, malformed-input, out-of-scope, sensitive-data, and rollback tests pending."
+      artifact: "Normal-case plus missing-input, out-of-scope, and sensitive-data rejection tests passed. Rollback test pending."
       tested_on: "2026-08-20"
   decision: "development_ready"
   conditions:
