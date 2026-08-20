@@ -25,7 +25,7 @@ gate_record:
   eu_article_50_applicability: "legal_review_required"
   score: 0
   critical_failures:
-    - "Retention and deletion control is absent"
+    - "Retention and deletion control has not been exercised"
     - "Retention and deletion control is absent"
     - "Rollback test result is absent"
   residual_risks:
@@ -48,9 +48,9 @@ gate_record:
       artifact: "Prototype has no network calls. Runtime-level egress control is not evidenced."
       tested_on: "2026-08-20"
     - control_id: "G10"
-      status: "unverified"
-      artifact: "Retention and deletion method not supplied"
-      tested_on: null
+      status: "partial"
+      artifact: "16-systems-exchange/PILOT-EVIDENCE-RETENTION-POLICY.md. Deletion exercise pending."
+      tested_on: "2026-08-20"
     - control_id: "G11"
       status: "verified"
       artifact: "16-systems-exchange/pilot-evidence/WS-CONT-WF-003-PILOT-001/normal-case-result.md"
