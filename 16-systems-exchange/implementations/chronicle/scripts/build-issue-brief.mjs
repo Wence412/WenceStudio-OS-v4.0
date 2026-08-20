@@ -4,6 +4,7 @@ import process from "node:process";
 const [inputPath, outputPath] = process.argv.slice(2);
 if (!inputPath || !outputPath) throw new Error("Usage: node build-issue-brief.mjs <approved-research.json> <issue-brief.md>");
 const input = JSON.parse(await readFile(inputPath, "utf8"));
+if (input.contains_personal_data || input.external_action_requested) throw new Error("Only approved, non-sensitive internal research is allowed. External actions are not supported.");
 const issue = input.issue || {};
 const selected = (input.research_items || []).filter(item => item.approved_for_editorial_use);
 if (!issue.working_title || !issue.thesis || selected.length === 0) throw new Error("Provide issue.working_title, issue.thesis, and at least one approved research item.");
