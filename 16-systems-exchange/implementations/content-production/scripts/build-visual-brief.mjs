@@ -1,0 +1,11 @@
+import { readFile, writeFile } from "node:fs/promises";
+import process from "node:process";
+const [inputPath, outputPath] = process.argv.slice(2);
+if (!inputPath || !outputPath) throw new Error("Usage: node build-visual-brief.mjs <approved-content.json> <visual-brief.md>");
+const input = JSON.parse(await readFile(inputPath, "utf8"));
+for (const key of ["title", "key_message", "platform", "approved_for_visual_direction"]) if (!input[key]) throw new Error(`Missing ${key}`);
+if (!input.approved_for_visual_direction) throw new Error("Content is not approved for visual direction.");
+const format = input.format || (input.platform === "Instagram" ? "4:5 portrait" : "16:9 landscape");
+const brief = `# Visual Production Brief\n\n## Status\nDraft. Design-owner approval required before use.\n\n## Content\n- Title: ${input.title}\n- Key message: ${input.key_message}\n- Platform: ${input.platform}\n- Format: ${format}\n\n## WenceStudio visual direction\n- Editorial, minimal-luxury composition with clear hierarchy.\n- Core palette: charcoal #1A1A1A, warm cream #FAF7F2, restrained gold #C9A84C.\n- Preserve generous negative space and legible type-safe areas.\n- Use one primary visual metaphor. Do not add logos, unsupported statistics, or decorative clutter.\n\n## Image prompt foundation\nCreate an editorial visual about "${input.key_message}". Charcoal and warm-cream base, restrained gold accent, architectural composition, premium magazine lighting, clean negative space for headline placement, no embedded text, no logos, no protected brand marks.\n\n## Review gates\n- Verify factual imagery and any chart data against approved sources.\n- Verify format, contrast, accessibility, and type-safe space.\n- Design owner approves final asset.\n`;
+await writeFile(outputPath, brief);
+console.log("Visual brief created.");
