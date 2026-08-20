@@ -1,0 +1,10 @@
+import { readFile, writeFile } from "node:fs/promises";
+import process from "node:process";
+const [inputPath, outputPath] = process.argv.slice(2);
+if (!inputPath || !outputPath) throw new Error("Usage: node build-learning-blueprint.mjs <approved-needs.json> <learning-blueprint.md>");
+const input = JSON.parse(await readFile(inputPath, "utf8"));
+if (!input.approved_needs_analysis || !input.audience || !Array.isArray(input.performance_outcomes) || !input.performance_outcomes.length) throw new Error("Provide approved needs analysis, audience, and performance outcomes.");
+const outcomes = input.performance_outcomes.map((outcome, index) => `${index + 1}. ${outcome}`).join("\n");
+const result = `# Learning Blueprint\n\nStatus: Draft. Instructional-design and compliance approval required.\n\n## Audience\n${input.audience}\n\n## Performance outcomes\n${outcomes}\n\n## Module structure\n1. Context and required standard\n2. Demonstration or example\n3. Guided practice\n4. Assessment aligned to each outcome\n5. Accessibility and reinforcement review\n\n## Controls\n- Do not use this draft as a compliance determination.\n- Confirm accessibility, policy, and assessment requirements with the accountable owner.\n- Approve before release to learners.\n`;
+await writeFile(outputPath, result);
+console.log("Learning blueprint draft created.");
