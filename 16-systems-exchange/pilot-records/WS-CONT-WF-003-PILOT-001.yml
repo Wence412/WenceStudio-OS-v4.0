@@ -25,8 +25,9 @@ gate_record:
   eu_article_50_applicability: "legal_review_required"
   score: 0
   critical_failures:
+    - "Retention and deletion control has not been exercised"
     - "Retention and deletion control is absent"
-    - "Failure and out-of-scope test results are absent"
+    - "Rollback test result is absent"
   residual_risks:
     - "Draft may overstate supplied evidence if editorial review is bypassed"
   evidence:
@@ -47,9 +48,9 @@ gate_record:
       artifact: "Prototype has no network calls. Runtime-level egress control is not evidenced."
       tested_on: "2026-08-20"
     - control_id: "G10"
-      status: "unverified"
-      artifact: "Retention and deletion method not supplied"
-      tested_on: null
+      status: "partial"
+      artifact: "16-systems-exchange/PILOT-EVIDENCE-RETENTION-POLICY.md. Deletion exercise pending."
+      tested_on: "2026-08-20"
     - control_id: "G11"
       status: "verified"
       artifact: "16-systems-exchange/pilot-evidence/WS-CONT-WF-003-PILOT-001/normal-case-result.md"
@@ -60,7 +61,7 @@ gate_record:
       tested_on: null
     - control_id: "G14"
       status: "partial"
-      artifact: "Normal-case real-input test passed. Boundary, malformed-input, out-of-scope, sensitive-data, and rollback tests pending."
+      artifact: "Normal-case plus missing-input, out-of-scope, and sensitive-data rejection tests passed. Rollback test pending."
       tested_on: "2026-08-20"
   decision: "development_ready"
   conditions:
