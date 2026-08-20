@@ -28,8 +28,8 @@ const records = source.match(/^    - asset_id:[\s\S]*?(?=^    - asset_id:|\s*$)/
 const errors = [];
 
 function field(record, name) {
-  const indentation = name === "asset_id" ? "    " : "      ";
-  return record.match(new RegExp("^" + indentation + name + ":\\s*(.+)$", "m"))?.[1]?.trim();
+  const prefix = name === "asset_id" ? "    - " : "      ";
+  return record.match(new RegExp("^" + prefix + name + ":\\s*(.+)$", "m"))?.[1]?.trim();
 }
 
 function assertAllowed(record, assetId, name, allowed) {
