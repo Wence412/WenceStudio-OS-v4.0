@@ -1,0 +1,17 @@
+{
+  "issue": {
+    "working_title": "Working title",
+    "edition": "The Systems Wire",
+    "audience": "L&D leaders, consultants, and small teams",
+    "thesis": "Replace this with an editor-approved, source-grounded thesis."
+  },
+  "research_items": [
+    {
+      "approved_for_editorial_use": true,
+      "title": "Example primary announcement",
+      "publisher": "Example Organization",
+      "published_on": "2026-08-20",
+      "url": "https://example.com/announcement"
+    }
+  ]
+}

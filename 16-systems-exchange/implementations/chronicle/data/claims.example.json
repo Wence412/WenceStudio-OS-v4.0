@@ -1,0 +1,8 @@
+{
+  "sources": [
+    { "id": "SRC-001", "url": "https://example.com/announcement", "publisher": "Example Organization", "published_on": "2026-08-20" }
+  ],
+  "claims": [
+    { "id": "CLM-001", "text": "Replace this with a claim to be reviewed.", "source_ids": ["SRC-001"] }
+  ]
+}
