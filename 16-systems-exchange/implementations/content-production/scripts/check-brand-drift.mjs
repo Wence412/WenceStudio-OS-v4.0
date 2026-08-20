@@ -1,0 +1,14 @@
+import { readFile, writeFile } from "node:fs/promises";
+import process from "node:process";
+const [inputPath, outputPath] = process.argv.slice(2);
+if (!inputPath || !outputPath) throw new Error("Usage: node check-brand-drift.mjs <visual-candidate.json> <drift-report.json>");
+const item = JSON.parse(await readFile(inputPath, "utf8"));
+const findings = [];
+const allowedColors = new Set(["#1A1A1A", "#FAF7F2", "#C9A84C", "#C9A24B"]);
+for (const color of item.colors || []) if (!allowedColors.has(color.toUpperCase())) findings.push(`Unapproved color: ${color}`);
+if (item.embedded_text) findings.push("Embedded text requires typographic review.");
+if (item.contains_logo) findings.push("Logo use requires brand-owner review.");
+if (!item.platform || !item.format) findings.push("Platform and format must be declared.");
+const output = { status: findings.length ? "review_required" : "aligned_pending_design_approval", findings, limitation: "This is a metadata check. It does not replace visual, legal, accessibility, or factual review.", required_human_action: "Design owner approves the final asset." };
+await writeFile(outputPath, JSON.stringify(output, null, 2) + "\n");
+console.log(`Brand-drift report created: ${findings.length} finding(s).`);
