@@ -1,0 +1,76 @@
+gate_record:
+  record_id: "AGR-2026-002"
+  asset_id: "WS-CONT-WF-003"
+  asset_name: "Chronicle Issue Architect"
+  asset_type: "workflow"
+  version: "0.1.0"
+  owner: "WenceStudio Founder"
+  reviewer: "WenceStudio Editorial Owner"
+  environment: "development"
+  business_purpose: "Create a reviewable Chronicle issue brief from explicitly approved research records."
+  prohibited_uses:
+    - "Autonomous publication"
+    - "External communication"
+    - "Web fetching or network access"
+    - "Use of unapproved research"
+    - "Persistent memory or credential use"
+  risk_tier: "low"
+  action_classes: ["A0", "A1"]
+  models: []
+  tools: ["Node.js file read and write"]
+  data_sources: ["Approved local research JSON. Real pilot input not yet supplied"]
+  network_allowlist: []
+  mcp_spec_version: null
+  jurisdictions: ["Unknown. No public pilot or jurisdiction-specific release is authorized"]
+  eu_article_50_applicability: "legal_review_required"
+  score: 0
+  critical_failures:
+    - "Named real-input test evidence is absent"
+    - "Redacted execution trace is absent"
+    - "Retention and deletion control is absent"
+    - "Failure and out-of-scope test results are absent"
+  residual_risks:
+    - "Draft may overstate supplied evidence if editorial review is bypassed"
+  evidence:
+    - control_id: "G01"
+      status: "partial"
+      artifact: "16-systems-exchange/systems/chronicle-issue-architect.yml"
+      tested_on: "2026-08-20"
+    - control_id: "G04"
+      status: "partial"
+      artifact: "16-systems-exchange/implementations/chronicle/scripts/build-issue-brief.mjs"
+      tested_on: "2026-08-20"
+    - control_id: "G05"
+      status: "partial"
+      artifact: "Local file-only prototype. No credentials or external tools declared."
+      tested_on: "2026-08-20"
+    - control_id: "G06"
+      status: "partial"
+      artifact: "Prototype has no network calls. Runtime-level egress control is not evidenced."
+      tested_on: "2026-08-20"
+    - control_id: "G10"
+      status: "unverified"
+      artifact: "Retention and deletion method not supplied"
+      tested_on: null
+    - control_id: "G11"
+      status: "unverified"
+      artifact: "No redacted execution trace"
+      tested_on: null
+    - control_id: "G13"
+      status: "unverified"
+      artifact: "No containment and recovery exercise"
+      tested_on: null
+    - control_id: "G14"
+      status: "partial"
+      artifact: "Example fixture exists. Real-input, boundary, and out-of-scope tests pending."
+      tested_on: "2026-08-20"
+  decision: "development_ready"
+  conditions:
+    - "Run only with synthetic or explicitly approved, minimum-necessary internal research."
+    - "Do not publish, message, or access the network."
+    - "Complete the test plan and attach a redacted trace before reconsidering pilot readiness."
+  approved_by: []
+  approved_on: null
+  expires_on: null
+  next_review_trigger: "Any model, tool, data-source, permission, workflow, or output-use change."
+  rollback_version: "0.1.0"
