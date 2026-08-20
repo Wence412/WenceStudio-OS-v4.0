@@ -25,7 +25,7 @@ const requiredFields = [
 ];
 
 const source = await readFile(inputPath, "utf8");
-const records = source.match(/^    - asset_id:[\s\S]*?(?=^    - asset_id:|\s*$)/gm) || [];
+const records = source.match(/^    - asset_id:[\\s\\S]*?(?=^    - asset_id:|(?![\\s\\S]))/gm) || [];
 const errors = [];
 
 function field(record, name) {
