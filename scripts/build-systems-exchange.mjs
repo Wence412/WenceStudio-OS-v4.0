@@ -4,7 +4,7 @@ import { dirname, resolve } from "node:path";
 const sourcePath = resolve(process.cwd(), "16-systems-exchange/SYSTEMS-REGISTRY.yml");
 const outputPath = resolve(process.cwd(), process.argv[2] || "apps/systems-exchange/data/systems.json");
 const source = await readFile(sourcePath, "utf8");
-const blocks = source.split(/\n(?=    - asset_id: )/).filter(block => block.includes("asset_id:"));
+const blocks = source.match(/    - asset_id:[\s\S]*?(?=\n    - asset_id:|\n?$)/g) || [];
 
 function valueFrom(block, key) {
   const line = block.split("\n").find(entry => entry.trimStart().startsWith(`${key}:`) || entry.trimStart().startsWith(`- ${key}:`));
