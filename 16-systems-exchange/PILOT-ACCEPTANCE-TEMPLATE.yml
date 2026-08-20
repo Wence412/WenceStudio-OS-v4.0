@@ -1,0 +1,24 @@
+pilot_acceptance:
+  record_id: "WS-SE-PA-YYYY-###"
+  asset_id: "WS-..."
+  owner: "Name"
+  reviewer: "Name"
+  pilot_start: "YYYY-MM-DD"
+  pilot_end: "YYYY-MM-DD"
+  permitted_users: []
+  permitted_data: "Approved minimum-necessary data"
+  data_retention_and_deletion: "Describe method and date"
+  tool_and_network_scope: "Local file processing only unless separately approved"
+  allowed_action_classes: ["A0", "A1"]
+  prohibited_actions: ["A2", "A3", "A4"]
+  evaluations:
+    normal_case: "pending"
+    boundary_case: "pending"
+    malformed_input: "pending"
+    injection_or_untrusted_content: "pending"
+    out_of_scope_request: "pending"
+    failure_and_stop: "pending"
+  residual_risks: []
+  decision: "development_ready | pilot_ready | blocked"
+  approved_by: []
+  approved_on: null
