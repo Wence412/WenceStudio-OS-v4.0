@@ -9,6 +9,7 @@ const allowedRisks = new Set(["low", "moderate", "high"]);
 const allowedListings = new Set(["HOLD", "INTERNAL_ONLY", "APPROVED", "DEPRECATED"]);
 const requiredFields = [
   "asset_id",
+  "specification_path",
   "title",
   "short_description",
   "system_type",
