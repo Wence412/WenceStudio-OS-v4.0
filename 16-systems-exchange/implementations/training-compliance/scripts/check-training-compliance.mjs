@@ -1,0 +1,13 @@
+import { readFile, writeFile } from "node:fs/promises";
+import process from "node:process";
+const [inputPath, outputPath] = process.argv.slice(2);
+if (!inputPath || !outputPath) throw new Error("Usage: node check-training-compliance.mjs <training-asset.json> <compliance-report.json>");
+const asset = JSON.parse(await readFile(inputPath, "utf8"));
+const findings = [];
+for (const key of ["asset_name", "version", "owner", "required_statements", "approval_history"]) if (!asset[key]) findings.push(`Missing required field: ${key}`);
+const present = new Set(asset.present_statements || []);
+for (const statement of asset.required_statements || []) if (!present.has(statement)) findings.push(`Required statement not confirmed: ${statement}`);
+if (!asset.approval_history?.approved_by) findings.push("No named approval owner is recorded.");
+const output = { status: findings.length ? "hold_for_compliance_review" : "ready_for_compliance_owner_review", findings, limitation: "This checks declared fields and statements only. It is not a legal or policy determination.", required_human_action: "Compliance owner approves release or documents an exception." };
+await writeFile(outputPath, JSON.stringify(output, null, 2) + "\n");
+console.log(`Compliance report created: ${findings.length} finding(s).`);
