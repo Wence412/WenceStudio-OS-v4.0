@@ -1,0 +1,30 @@
+system_intake:
+  intake_id: "WS-SE-INTAKE-YYYY-###"
+  submitted_on: "YYYY-MM-DD"
+  submitted_by: "Name or team"
+  asset_id: "WS-DOMAIN-TYPE-###"
+  title: "System name"
+  version: "0.1.0"
+  system_type: "agent | workflow | prompt_system | skill | SOP | implementation_kit"
+  os_domain: "Applicable WenceStudio OS domain"
+  target_user: "Primary operating user"
+  short_description: "One precise sentence describing what the system does."
+  business_outcome: "The reviewable result or decision it supports."
+  trigger: "manual | scheduled | event-based"
+  inputs:
+    - "Approved inputs only"
+  outputs:
+    - "Reviewable outputs only"
+  data_classification: "public | internal | confidential | restricted"
+  risk_tier: "low | moderate | high"
+  external_actions: []
+  human_approval_points:
+    - "Required approval before any consequential action"
+  dependencies:
+    - "Approved tools, data sources, or systems"
+  validation_evidence:
+    - "Test, review, or source demonstrating readiness"
+  listing_status: "HOLD | INTERNAL_ONLY | APPROVED | DEPRECATED"
+  owner: "Named accountable owner"
+  reviewer: "Named review owner"
+  notes: "Known limits, prohibited uses, and unresolved risks."
