@@ -9,6 +9,7 @@ const allowedRisks = new Set(["low", "moderate", "high"]);
 const allowedListings = new Set(["HOLD", "INTERNAL_ONLY", "APPROVED", "DEPRECATED"]);
 const requiredFields = [
   "asset_id",
+  "specification_path",
   "title",
   "short_description",
   "system_type",
@@ -24,7 +25,7 @@ const requiredFields = [
 ];
 
 const source = await readFile(inputPath, "utf8");
-const records = source.match(/^    - asset_id:[\s\S]*?(?=^    - asset_id:|\s*$)/gm) || [];
+const records = source.match(/^    - asset_id:[\s\S]*?(?=^    - asset_id:|(?![\s\S]))/gm) || [];
 const errors = [];
 
 function field(record, name) {

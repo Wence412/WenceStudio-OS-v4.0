@@ -1,0 +1,38 @@
+system_record:
+  asset_id: "WS-CONT-WF-003"
+  title: "Chronicle Issue Architect"
+  version: "0.1.0"
+  implementation_status: "specification_only"
+  listing_status: "HOLD"
+  owner: "WenceStudio Governance"
+  reviewer: "Named domain owner required before release"
+  system_type: "workflow"
+  os_domain: "Content OS"
+  target_user: "WenceStudio editorial team"
+  trigger: "manual"
+  risk_tier: "low"
+  data_classification: "internal"
+  purpose: "Provide a governed, reviewable operating capability within Content OS."
+  inputs:
+  - "Approved research brief"
+  - "Editorial issue type"
+  - "Audience and distribution constraints"
+  outputs:
+  - "Issue outline"
+  - "Hook and thesis options"
+  - "Reviewable distribution plan"
+  external_actions: []
+  human_approval_points:
+  - "Approve issue scope"
+  - "Approve final publication"
+  prohibited_uses:
+  - "Autonomous publication"
+  - "Unapproved factual claims"
+  - "External communications"
+  validation_criteria:
+  - "Outline aligns to source brief"
+  - "Editorial-owner review"
+  dependencies:
+  - "Approved operating context and current source materials"
+  - "Human reviewer with domain accountability"
+  release_condition: "A named owner confirms validation evidence and changes listing status through the Exchange contribution workflow."

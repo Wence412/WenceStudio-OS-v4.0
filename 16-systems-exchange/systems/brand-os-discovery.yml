@@ -1,0 +1,38 @@
+system_record:
+  asset_id: "WS-BRAND-AGT-003"
+  title: "Brand OS Discovery Agent"
+  version: "0.1.0"
+  implementation_status: "specification_only"
+  listing_status: "INTERNAL_ONLY"
+  owner: "WenceStudio Governance"
+  reviewer: "Named domain owner required before release"
+  system_type: "agent"
+  os_domain: "Brand OS"
+  target_user: "WenceStudio client-delivery team"
+  trigger: "manual"
+  risk_tier: "high"
+  data_classification: "confidential"
+  purpose: "Provide a governed, reviewable operating capability within Brand OS."
+  inputs:
+  - "Approved client intake"
+  - "Project scope"
+  - "Client-provided brand materials"
+  outputs:
+  - "Discovery brief"
+  - "Gaps and dependencies"
+  - "Recommended scope"
+  external_actions: []
+  human_approval_points:
+  - "Approve client-facing scope"
+  prohibited_uses:
+  - "Autonomous client communication"
+  - "Unapproved use of client confidential information"
+  - "Contractual commitments"
+  validation_criteria:
+  - "Scope-to-intake traceability"
+  - "Confidentiality check"
+  - "Client-delivery owner review"
+  dependencies:
+  - "Approved operating context and current source materials"
+  - "Human reviewer with domain accountability"
+  release_condition: "A named owner confirms validation evidence and changes listing status through the Exchange contribution workflow."

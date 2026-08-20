@@ -1,0 +1,39 @@
+system_record:
+  asset_id: "WS-GOV-AGT-002"
+  title: "Training Compliance Review Gate"
+  version: "0.1.0"
+  implementation_status: "specification_only"
+  listing_status: "INTERNAL_ONLY"
+  owner: "WenceStudio Governance"
+  reviewer: "Named domain owner required before release"
+  system_type: "agent"
+  os_domain: "Executive OS"
+  target_user: "Training and compliance owners"
+  trigger: "event-based"
+  risk_tier: "high"
+  data_classification: "confidential"
+  purpose: "Provide a governed, reviewable operating capability within Executive OS."
+  inputs:
+  - "Training asset"
+  - "Required statements"
+  - "Current policy requirements"
+  - "Approval history"
+  outputs:
+  - "Pre-release compliance checklist"
+  - "Exceptions log"
+  - "Release recommendation"
+  external_actions: []
+  human_approval_points:
+  - "Approve release or exception"
+  prohibited_uses:
+  - "Legal determination"
+  - "Autonomous release"
+  - "Policy changes"
+  validation_criteria:
+  - "Version and approval check"
+  - "Required-statement check"
+  - "Compliance-owner sign-off"
+  dependencies:
+  - "Approved operating context and current source materials"
+  - "Human reviewer with domain accountability"
+  release_condition: "A named owner confirms validation evidence and changes listing status through the Exchange contribution workflow."

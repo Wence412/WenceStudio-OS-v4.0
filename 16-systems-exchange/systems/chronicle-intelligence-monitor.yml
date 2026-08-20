@@ -1,0 +1,38 @@
+system_record:
+  asset_id: "WS-CONT-WF-001"
+  title: "Chronicle Intelligence Monitor"
+  version: "0.1.0"
+  implementation_status: "specification_only"
+  listing_status: "HOLD"
+  owner: "WenceStudio Governance"
+  reviewer: "Named domain owner required before release"
+  system_type: "workflow"
+  os_domain: "Content OS"
+  target_user: "WenceStudio editorial team"
+  trigger: "scheduled"
+  risk_tier: "moderate"
+  data_classification: "public"
+  purpose: "Provide a governed, reviewable operating capability within Content OS."
+  inputs:
+  - "Approved topic priorities"
+  - "Public primary and authoritative sources"
+  outputs:
+  - "Ranked research queue"
+  - "Source and date notes"
+  - "Uncertainty flags"
+  external_actions: []
+  human_approval_points:
+  - "Select topics"
+  - "Approve source use before editorial drafting"
+  prohibited_uses:
+  - "External publication"
+  - "Autonomous source claims"
+  - "Client communication"
+  validation_criteria:
+  - "Source relevance check"
+  - "Date and attribution check"
+  - "Editorial-owner review"
+  dependencies:
+  - "Approved operating context and current source materials"
+  - "Human reviewer with domain accountability"
+  release_condition: "A named owner confirms validation evidence and changes listing status through the Exchange contribution workflow."

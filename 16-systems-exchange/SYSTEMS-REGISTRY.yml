@@ -7,6 +7,7 @@ registry:
   last_reviewed: 2026-08-20
   systems:
     - asset_id: WS-CONT-WF-001
+      specification_path: 16-systems-exchange/systems/chronicle-intelligence-monitor.yml
       title: Chronicle Intelligence Monitor
       short_description: Collects relevant AI, L&D, design, governance, and creator-economy developments for editorial review.
       system_type: workflow
@@ -20,6 +21,7 @@ registry:
       human_approval_points: [Select topics and approve source use]
       listing_status: HOLD
     - asset_id: WS-CONT-AGT-002
+      specification_path: 16-systems-exchange/systems/chronicle-evidence-verifier.yml
       title: Chronicle Evidence Verifier
       short_description: Checks claims, dates, source relevance, primary-source availability, and uncertainty before editorial use.
       system_type: agent
@@ -33,6 +35,7 @@ registry:
       human_approval_points: [Approve final claims and citations]
       listing_status: HOLD
     - asset_id: WS-CONT-WF-003
+      specification_path: 16-systems-exchange/systems/chronicle-issue-architect.yml
       title: Chronicle Issue Architect
       short_description: Turns approved research into a structured Chronicle issue outline, hook, argument, and distribution plan.
       system_type: workflow
@@ -46,6 +49,7 @@ registry:
       human_approval_points: [Approve final issue and publication]
       listing_status: HOLD
     - asset_id: WS-CONT-WF-004
+      specification_path: 16-systems-exchange/systems/multi-channel-repurposing.yml
       title: Multi-Channel Repurposing System
       short_description: Converts approved long-form content into channel-specific drafts and visual briefs.
       system_type: workflow
@@ -59,6 +63,7 @@ registry:
       human_approval_points: [Approve each external post]
       listing_status: HOLD
     - asset_id: WS-DESIGN-AGT-001
+      specification_path: 16-systems-exchange/systems/visual-direction-agent.yml
       title: Visual Direction Agent
       short_description: Produces identity-locked image briefs and checks visual outputs against WenceStudio standards.
       system_type: agent
@@ -72,6 +77,7 @@ registry:
       human_approval_points: [Approve final visual asset]
       listing_status: HOLD
     - asset_id: WS-LEARN-AGT-001
+      specification_path: 16-systems-exchange/systems/training-needs-analysis-agent.yml
       title: Training Needs Analysis Agent
       short_description: Converts performance gaps, incident patterns, feedback, and requirements into a structured needs analysis.
       system_type: agent
@@ -85,6 +91,7 @@ registry:
       human_approval_points: [Approve data use and recommendations]
       listing_status: INTERNAL_ONLY
     - asset_id: WS-LEARN-WF-002
+      specification_path: 16-systems-exchange/systems/learning-module-architect.yml
       title: Learning Module Architect
       short_description: Builds learning objectives, modular content, practice activities, assessments, and accessibility requirements.
       system_type: workflow
@@ -98,6 +105,7 @@ registry:
       human_approval_points: [Approve learning design and compliance requirements]
       listing_status: HOLD
     - asset_id: WS-LEARN-WF-003
+      specification_path: 16-systems-exchange/systems/training-feedback-intelligence.yml
       title: Training Feedback Intelligence Workflow
       short_description: Aggregates learner feedback, identifies themes, and produces a reviewable improvement report.
       system_type: workflow
@@ -111,6 +119,7 @@ registry:
       human_approval_points: [Approve distribution and recommendations]
       listing_status: INTERNAL_ONLY
     - asset_id: WS-GOV-AGT-002
+      specification_path: 16-systems-exchange/systems/training-compliance-review-gate.yml
       title: Training Compliance Review Gate
       short_description: Checks training assets for required statements, acknowledgments, versioning, approval status, and exceptions.
       system_type: agent
@@ -124,6 +133,7 @@ registry:
       human_approval_points: [Approve release or exception]
       listing_status: INTERNAL_ONLY
     - asset_id: WS-SALES-WF-001
+      specification_path: 16-systems-exchange/systems/icp-research-qualification.yml
       title: ICP Research and Qualification System
       short_description: Researches prospective organizations and scores fit against approved WenceStudio ideal-customer criteria.
       system_type: workflow
@@ -137,6 +147,7 @@ registry:
       human_approval_points: [Approve outreach list and messages]
       listing_status: HOLD
     - asset_id: WS-BRAND-AGT-003
+      specification_path: 16-systems-exchange/systems/brand-os-discovery.yml
       title: Brand OS Discovery Agent
       short_description: Converts approved client intake into brand-system gaps, dependencies, recommendations, and delivery scope.
       system_type: agent
@@ -150,6 +161,7 @@ registry:
       human_approval_points: [Approve client-facing scope]
       listing_status: INTERNAL_ONLY
     - asset_id: WS-DELIVERY-WF-001
+      specification_path: 16-systems-exchange/systems/client-onboarding-orchestrator.yml
       title: Client Onboarding Orchestrator
       short_description: Prepares client intake, project setup, milestones, approvals, responsibilities, and required documentation.
       system_type: workflow
