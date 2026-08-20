@@ -23,6 +23,7 @@ pilot_evidence_register:
       retention_control: "unverified"
       acceptance_record: "unverified"
     - asset_id: "WS-CONT-WF-003"
+      pilot_record: "16-systems-exchange/pilot-records/WS-CONT-WF-003-PILOT-001.yml"
       pilot_state: "development_ready"
       owner: "Unknown"
       reviewer: "Unknown"
