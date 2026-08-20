@@ -1,0 +1,44 @@
+registry:
+  registry_id: WS-MR-001
+  title: WenceStudio OS v4.0 Master Registry
+  version: 4.0.0-draft
+  owner: WenceStudio Governance
+  status: DRAFT
+  last_reviewed: 2026-08-20
+  assets:
+    - asset_id: WS-EXEC-OS
+      title: Executive OS
+      asset_type: operating_system
+      owner: WenceStudio Governance
+      status: DRAFT
+      risk_tier: moderate
+    - asset_id: WS-KNOW-OS
+      title: Knowledge OS
+      asset_type: operating_system
+      owner: WenceStudio Governance
+      status: DRAFT
+      risk_tier: moderate
+    - asset_id: WS-PROMPT-OS
+      title: Prompt OS
+      asset_type: operating_system
+      owner: WenceStudio Governance
+      status: DRAFT
+      risk_tier: moderate
+    - asset_id: WS-AUTO-OS
+      title: Automation OS
+      asset_type: operating_system
+      owner: WenceStudio Governance
+      status: DRAFT
+      risk_tier: high
+    - asset_id: WS-TECH-OS
+      title: Technology OS
+      asset_type: operating_system
+      owner: WenceStudio Governance
+      status: DRAFT
+      risk_tier: high
+    - asset_id: WS-DELIVERY-OS
+      title: Client Delivery OS
+      asset_type: operating_system
+      owner: WenceStudio Governance
+      status: DRAFT
+      risk_tier: high
