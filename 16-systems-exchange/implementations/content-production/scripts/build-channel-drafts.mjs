@@ -1,0 +1,12 @@
+import { readFile, writeFile } from "node:fs/promises";
+import process from "node:process";
+const [inputPath, outputPath] = process.argv.slice(2);
+if (!inputPath || !outputPath) throw new Error("Usage: node build-channel-drafts.mjs <approved-issue.json> <channel-drafts.md>");
+const input = JSON.parse(await readFile(inputPath, "utf8"));
+const issue = input.issue || {};
+for (const key of ["title", "thesis", "evidence_summary", "approved_for_repurposing"]) if (!issue[key]) throw new Error(`Missing issue.${key}`);
+if (!issue.approved_for_repurposing) throw new Error("Issue is not approved for repurposing.");
+const cta = issue.call_to_action || "What would you review before applying this in your own workflow?";
+const text = `# Channel Draft Set: ${issue.title}\n\nStatus: Draft. Human approval required before every external post.\n\n## LinkedIn\n**Hook:** ${issue.thesis}\n\n${issue.evidence_summary}\n\nPractical question: ${cta}\n\n## Instagram Carousel\n1. ${issue.title}\n2. The tension: ${issue.thesis}\n3. What the approved evidence shows: ${issue.evidence_summary}\n4. What it does not prove: Add editorially approved limitation.\n5. ${cta}\n\n## Facebook\n${issue.thesis}\n\n${issue.evidence_summary}\n\n${cta}\n\n## Newsletter Promotion\n**Subject option:** ${issue.title}\n**Preview text:** ${issue.thesis}\n**Body:** ${issue.evidence_summary}\n\n## Required review\n- Confirm claims, citations, and audience fit.\n- Confirm platform-specific formatting and disclosures.\n- Approve each final post manually.\n`;
+await writeFile(outputPath, text);
+console.log("Channel drafts created.");
