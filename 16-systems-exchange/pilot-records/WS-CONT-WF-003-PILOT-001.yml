@@ -25,8 +25,6 @@ gate_record:
   eu_article_50_applicability: "legal_review_required"
   score: 0
   critical_failures:
-    - "Named real-input test evidence is absent"
-    - "Redacted execution trace is absent"
     - "Retention and deletion control is absent"
     - "Failure and out-of-scope test results are absent"
   residual_risks:
@@ -53,16 +51,16 @@ gate_record:
       artifact: "Retention and deletion method not supplied"
       tested_on: null
     - control_id: "G11"
-      status: "unverified"
-      artifact: "No redacted execution trace"
-      tested_on: null
+      status: "verified"
+      artifact: "16-systems-exchange/pilot-evidence/WS-CONT-WF-003-PILOT-001/normal-case-result.md"
+      tested_on: "2026-08-20"
     - control_id: "G13"
       status: "unverified"
       artifact: "No containment and recovery exercise"
       tested_on: null
     - control_id: "G14"
       status: "partial"
-      artifact: "Example fixture exists. Real-input, boundary, and out-of-scope tests pending."
+      artifact: "Normal-case real-input test passed. Boundary, malformed-input, out-of-scope, sensitive-data, and rollback tests pending."
       tested_on: "2026-08-20"
   decision: "development_ready"
   conditions:
