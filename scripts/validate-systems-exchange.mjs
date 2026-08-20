@@ -44,7 +44,8 @@ for (const record of records) {
   const assetId = field(record, "asset_id") || "unknown asset";
   for (const name of requiredFields) {
     const value = field(record, name);
-    if (!value || value === "[]" || value === '""') errors.push(`${assetId}: missing ${name}`);
+    if (!value || value === '\""') errors.push(`${assetId}: missing ${name}`);
+    else if (value === "[]" && name !== "external_actions") errors.push(`${assetId}: missing ${name}`);
   }
   assertAllowed(record, assetId, "system_type", allowedTypes);
   assertAllowed(record, assetId, "trigger", allowedTriggers);
