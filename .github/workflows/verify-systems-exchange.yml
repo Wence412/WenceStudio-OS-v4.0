@@ -1,0 +1,32 @@
+name: Verify Systems Exchange
+
+on:
+  pull_request:
+    paths:
+      - "16-systems-exchange/**"
+      - "scripts/**"
+      - ".github/workflows/verify-systems-exchange.yml"
+  push:
+    branches: [main]
+    paths:
+      - "16-systems-exchange/**"
+      - "scripts/**"
+      - ".github/workflows/verify-systems-exchange.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - name: Validate registry
+        run: node scripts/validate-systems-exchange.mjs
+      - name: Run private prototype fixtures
+        run: node scripts/run-private-prototype-checks.mjs
+      - name: Build catalog data
+        run: node scripts/build-systems-exchange.mjs apps/systems-exchange/data/systems.json
