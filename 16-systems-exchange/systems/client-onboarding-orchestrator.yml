@@ -1,0 +1,39 @@
+system_record:
+  asset_id: "WS-DELIVERY-WF-001"
+  title: "Client Onboarding Orchestrator"
+  version: "0.1.0"
+  implementation_status: "specification_only"
+  listing_status: "INTERNAL_ONLY"
+  owner: "WenceStudio Governance"
+  reviewer: "Named domain owner required before release"
+  system_type: "workflow"
+  os_domain: "Client Delivery OS"
+  target_user: "WenceStudio client-delivery team"
+  trigger: "event-based"
+  risk_tier: "high"
+  data_classification: "confidential"
+  purpose: "Provide a governed, reviewable operating capability within Client Delivery OS."
+  inputs:
+  - "Signed engagement and approved scope"
+  - "Client intake"
+  - "Project terms and milestones"
+  outputs:
+  - "Onboarding package"
+  - "Milestone plan"
+  - "Approval and responsibility matrix"
+  external_actions: []
+  human_approval_points:
+  - "Approve client communication"
+  - "Approve project activation"
+  prohibited_uses:
+  - "Autonomous client messages"
+  - "Contractual amendments"
+  - "Access provisioning or permission changes"
+  validation_criteria:
+  - "Scope and contract alignment"
+  - "Milestone check"
+  - "Delivery-owner approval"
+  dependencies:
+  - "Approved operating context and current source materials"
+  - "Human reviewer with domain accountability"
+  release_condition: "A named owner confirms validation evidence and changes listing status through the Exchange contribution workflow."
