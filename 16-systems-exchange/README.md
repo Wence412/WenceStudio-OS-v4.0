@@ -1,27 +1,29 @@
 # WenceStudio Systems Exchange
 
 ## Status
-PLANNED. This module begins only after the OS foundation and master registry are reviewed.
+
+DRAFT. The catalog interface and registry foundation are in place. Listing release remains subject to governance review and hosting is intentionally deferred.
 
 ## Purpose
-The Systems Exchange will be the governed access layer for approved WenceStudio agents, workflows, prompt systems, skills, SOPs, and implementation kits.
 
-## Non-negotiable requirements
-- It reads from the Master Registry, not a duplicate catalog.
-- Every system displays owner, version, validation status, risk tier, tools, and human approval points.
-- It distinguishes drafts, tested systems, approved systems, and deprecated systems.
-- It does not enable autonomous publication, client communication, permission expansion, or production changes.
+The Systems Exchange is the governed access layer for approved WenceStudio agents, workflows, prompt systems, skills, SOPs, and implementation kits.
+
+## Controls
+
+- The catalog is generated from `SYSTEMS-REGISTRY.yml`.
+- Every listing identifies its owner, risk tier, data classification, trigger, listing state, and human approval points.
+- `SYSTEM-INTAKE-TEMPLATE.yml` standardizes submissions and material changes.
+- `EXCHANGE-CONTRIBUTION-WORKFLOW.md` defines the review and release process.
+- `scripts/validate-systems-exchange.mjs` checks required registry fields and controlled vocabulary before generation.
+- The Exchange does not authorize autonomous publication, client communication, permission expansion, spending, or production changes.
+
+## Local catalog checks
+
+```bash
+node scripts/validate-systems-exchange.mjs
+node scripts/build-systems-exchange.mjs apps/systems-exchange/data/systems.json
+```
 
 ## Initial catalog candidates
-1. Chronicle Intelligence Monitor
-2. Chronicle Evidence Verifier
-3. Chronicle Issue Architect
-4. Multi-Channel Repurposing System
-5. Visual Direction Agent
-6. Training Needs Analysis Agent
-7. Learning Module Architect
-8. Training Feedback Intelligence Workflow
-9. Training Compliance Review Gate
-10. ICP Research and Qualification System
-11. Brand OS Discovery Agent
-12. Client Onboarding Orchestrator
+
+The Exchange currently tracks 12 systems across Content, Design, Knowledge, Executive, Sales, Brand, and Client Delivery OS domains. Each remains in its declared listing state until a named owner completes review.
