@@ -1,0 +1,33 @@
+system:
+  asset_id: WS-[DOMAIN]-[TYPE]-[NNN]
+  title: ""
+  short_description: ""
+  system_type: workflow
+  os_domain: ""
+  target_user: ""
+  business_outcome: ""
+  owner: WenceStudio Governance
+  version: 0.1.0
+  lifecycle_status: DRAFT
+  listing_status: HOLD
+  risk_tier: low
+  data_classification: internal
+  trigger: manual
+  inputs: []
+  outputs: []
+  tools: []
+  models: []
+  data_sources: []
+  permissions_required: []
+  external_actions: []
+  human_approval_points: []
+  prohibited_uses: []
+  dependencies: []
+  validation_status: NOT_TESTED
+  test_procedure: ""
+  success_criteria: ""
+  failure_handling: ""
+  rollback_procedure: ""
+  related_assets: []
+  last_reviewed: YYYY-MM-DD
+  change_log: []
