@@ -1,0 +1,164 @@
+registry:
+  registry_id: WS-SE-001
+  title: WenceStudio Systems Exchange Registry
+  version: 0.1.0
+  owner: WenceStudio Governance
+  status: DRAFT
+  last_reviewed: 2026-08-20
+  systems:
+    - asset_id: WS-CONT-WF-001
+      title: Chronicle Intelligence Monitor
+      short_description: Collects relevant AI, L&D, design, governance, and creator-economy developments for editorial review.
+      system_type: workflow
+      os_domain: Content OS
+      target_user: WenceStudio editorial team
+      business_outcome: A prioritized research queue for Chronicle planning.
+      trigger: scheduled
+      risk_tier: moderate
+      data_classification: public
+      external_actions: []
+      human_approval_points: [Select topics and approve source use]
+      listing_status: HOLD
+    - asset_id: WS-CONT-AGT-002
+      title: Chronicle Evidence Verifier
+      short_description: Checks claims, dates, source relevance, primary-source availability, and uncertainty before editorial use.
+      system_type: agent
+      os_domain: Content OS
+      target_user: WenceStudio editorial team
+      business_outcome: Source-backed editorial research with documented confidence.
+      trigger: manual
+      risk_tier: moderate
+      data_classification: public
+      external_actions: []
+      human_approval_points: [Approve final claims and citations]
+      listing_status: HOLD
+    - asset_id: WS-CONT-WF-003
+      title: Chronicle Issue Architect
+      short_description: Turns approved research into a structured Chronicle issue outline, hook, argument, and distribution plan.
+      system_type: workflow
+      os_domain: Content OS
+      target_user: WenceStudio editorial team
+      business_outcome: A reviewable issue brief aligned to The Signal, The Systems Wire, or The Blueprint.
+      trigger: manual
+      risk_tier: low
+      data_classification: internal
+      external_actions: []
+      human_approval_points: [Approve final issue and publication]
+      listing_status: HOLD
+    - asset_id: WS-CONT-WF-004
+      title: Multi-Channel Repurposing System
+      short_description: Converts approved long-form content into channel-specific drafts and visual briefs.
+      system_type: workflow
+      os_domain: Content OS
+      target_user: WenceStudio content team
+      business_outcome: Consistent LinkedIn, Instagram, Facebook, and newsletter derivatives.
+      trigger: event-based
+      risk_tier: moderate
+      data_classification: internal
+      external_actions: []
+      human_approval_points: [Approve each external post]
+      listing_status: HOLD
+    - asset_id: WS-DESIGN-AGT-001
+      title: Visual Direction Agent
+      short_description: Produces identity-locked image briefs and checks visual outputs against WenceStudio standards.
+      system_type: agent
+      os_domain: Design OS
+      target_user: WenceStudio design team
+      business_outcome: Consistent visual direction with reduced brand drift.
+      trigger: manual
+      risk_tier: low
+      data_classification: internal
+      external_actions: []
+      human_approval_points: [Approve final visual asset]
+      listing_status: HOLD
+    - asset_id: WS-LEARN-AGT-001
+      title: Training Needs Analysis Agent
+      short_description: Converts performance gaps, incident patterns, feedback, and requirements into a structured needs analysis.
+      system_type: agent
+      os_domain: Knowledge OS
+      target_user: L&D leaders and training coordinators
+      business_outcome: A prioritized, evidence-based training diagnosis.
+      trigger: manual
+      risk_tier: high
+      data_classification: confidential
+      external_actions: []
+      human_approval_points: [Approve data use and recommendations]
+      listing_status: INTERNAL_ONLY
+    - asset_id: WS-LEARN-WF-002
+      title: Learning Module Architect
+      short_description: Builds learning objectives, modular content, practice activities, assessments, and accessibility requirements.
+      system_type: workflow
+      os_domain: Knowledge OS
+      target_user: Instructional designers
+      business_outcome: A structured course blueprint ready for instructional review.
+      trigger: manual
+      risk_tier: moderate
+      data_classification: internal
+      external_actions: []
+      human_approval_points: [Approve learning design and compliance requirements]
+      listing_status: HOLD
+    - asset_id: WS-LEARN-WF-003
+      title: Training Feedback Intelligence Workflow
+      short_description: Aggregates learner feedback, identifies themes, and produces a reviewable improvement report.
+      system_type: workflow
+      os_domain: Knowledge OS
+      target_user: Training coordinators
+      business_outcome: Evidence-backed recommendations for training improvements.
+      trigger: scheduled
+      risk_tier: high
+      data_classification: confidential
+      external_actions: []
+      human_approval_points: [Approve distribution and recommendations]
+      listing_status: INTERNAL_ONLY
+    - asset_id: WS-GOV-AGT-002
+      title: Training Compliance Review Gate
+      short_description: Checks training assets for required statements, acknowledgments, versioning, approval status, and exceptions.
+      system_type: agent
+      os_domain: Executive OS
+      target_user: Training and compliance owners
+      business_outcome: A documented pre-release compliance review.
+      trigger: event-based
+      risk_tier: high
+      data_classification: confidential
+      external_actions: []
+      human_approval_points: [Approve release or exception]
+      listing_status: INTERNAL_ONLY
+    - asset_id: WS-SALES-WF-001
+      title: ICP Research and Qualification System
+      short_description: Researches prospective organizations and scores fit against approved WenceStudio ideal-customer criteria.
+      system_type: workflow
+      os_domain: Sales OS
+      target_user: WenceStudio founder and sales team
+      business_outcome: A prioritized prospect brief with evidence and uncertainty notes.
+      trigger: manual
+      risk_tier: moderate
+      data_classification: public
+      external_actions: []
+      human_approval_points: [Approve outreach list and messages]
+      listing_status: HOLD
+    - asset_id: WS-BRAND-AGT-003
+      title: Brand OS Discovery Agent
+      short_description: Converts approved client intake into brand-system gaps, dependencies, recommendations, and delivery scope.
+      system_type: agent
+      os_domain: Brand OS
+      target_user: WenceStudio client-delivery team
+      business_outcome: A traceable discovery brief for a Brand OS engagement.
+      trigger: manual
+      risk_tier: high
+      data_classification: confidential
+      external_actions: []
+      human_approval_points: [Approve client-facing scope]
+      listing_status: INTERNAL_ONLY
+    - asset_id: WS-DELIVERY-WF-001
+      title: Client Onboarding Orchestrator
+      short_description: Prepares client intake, project setup, milestones, approvals, responsibilities, and required documentation.
+      system_type: workflow
+      os_domain: Client Delivery OS
+      target_user: WenceStudio client-delivery team
+      business_outcome: A consistent, reviewable client onboarding package.
+      trigger: event-based
+      risk_tier: high
+      data_classification: confidential
+      external_actions: []
+      human_approval_points: [Approve client communication and project activation]
+      listing_status: INTERNAL_ONLY
