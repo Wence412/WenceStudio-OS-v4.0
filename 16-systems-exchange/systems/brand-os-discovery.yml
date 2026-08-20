@@ -2,7 +2,7 @@ system_record:
   asset_id: "WS-BRAND-AGT-003"
   title: "Brand OS Discovery Agent"
   version: "0.1.0"
-  implementation_status: "specification_only"
+  implementation_status: "private_prototype"
   listing_status: "INTERNAL_ONLY"
   owner: "WenceStudio Governance"
   reviewer: "Named domain owner required before release"
@@ -35,4 +35,5 @@ system_record:
   dependencies:
   - "Approved operating context and current source materials"
   - "Human reviewer with domain accountability"
+  implementation_path: "16-systems-exchange/implementations/client-delivery"
   release_condition: "A named owner confirms validation evidence and changes listing status through the Exchange contribution workflow."
