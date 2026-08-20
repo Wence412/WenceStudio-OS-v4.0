@@ -6,39 +6,20 @@ registry:
   status: DRAFT
   last_reviewed: 2026-08-20
   assets:
-    - asset_id: WS-EXEC-OS
-      title: Executive OS
-      asset_type: operating_system
-      owner: WenceStudio Governance
-      status: DRAFT
-      risk_tier: moderate
-    - asset_id: WS-KNOW-OS
-      title: Knowledge OS
-      asset_type: operating_system
-      owner: WenceStudio Governance
-      status: DRAFT
-      risk_tier: moderate
-    - asset_id: WS-PROMPT-OS
-      title: Prompt OS
-      asset_type: operating_system
-      owner: WenceStudio Governance
-      status: DRAFT
-      risk_tier: moderate
-    - asset_id: WS-AUTO-OS
-      title: Automation OS
-      asset_type: operating_system
-      owner: WenceStudio Governance
-      status: DRAFT
-      risk_tier: high
-    - asset_id: WS-TECH-OS
-      title: Technology OS
-      asset_type: operating_system
-      owner: WenceStudio Governance
-      status: DRAFT
-      risk_tier: high
-    - asset_id: WS-DELIVERY-OS
-      title: Client Delivery OS
-      asset_type: operating_system
-      owner: WenceStudio Governance
-      status: DRAFT
-      risk_tier: high
+    - { asset_id: WS-EXEC-OS, title: Executive OS, asset_type: operating_system, status: DRAFT, risk_tier: moderate }
+    - { asset_id: WS-BRAND-OS, title: Brand OS, asset_type: operating_system, status: PENDING_CAPTURE, risk_tier: moderate }
+    - { asset_id: WS-KNOW-OS, title: Knowledge OS, asset_type: operating_system, status: DRAFT, risk_tier: moderate }
+    - { asset_id: WS-PROD-OS, title: Product OS, asset_type: operating_system, status: PENDING_CAPTURE, risk_tier: moderate }
+    - { asset_id: WS-PROMPT-OS, title: Prompt OS, asset_type: operating_system, status: DRAFT, risk_tier: moderate }
+    - { asset_id: WS-DESIGN-OS, title: Design OS, asset_type: operating_system, status: PENDING_CAPTURE, risk_tier: moderate }
+    - { asset_id: WS-AUTO-OS, title: Automation OS, asset_type: operating_system, status: DRAFT, risk_tier: high }
+    - { asset_id: WS-TECH-OS, title: Technology OS, asset_type: operating_system, status: DRAFT, risk_tier: high }
+    - { asset_id: WS-CONT-OS, title: Content OS, asset_type: operating_system, status: PENDING_CAPTURE, risk_tier: moderate }
+    - { asset_id: WS-SALES-OS, title: Sales OS, asset_type: operating_system, status: PENDING_CAPTURE, risk_tier: moderate }
+    - { asset_id: WS-DELIVERY-OS, title: Client Delivery OS, asset_type: operating_system, status: DRAFT, risk_tier: high }
+    - { asset_id: WS-OPS-OS, title: Operations OS, asset_type: operating_system, status: PENDING_CAPTURE, risk_tier: moderate }
+    - { asset_id: WS-ARCHIVE-OS, title: Archive OS, asset_type: operating_system, status: DRAFT, risk_tier: moderate }
+    - { asset_id: WS-SE-001, title: WenceStudio Systems Exchange Registry, asset_type: registry, status: DRAFT, risk_tier: high }
+  authoritative_registries:
+    - { registry_id: WS-MR-001, path: 13-master-registry/MASTER-REGISTRY.yml }
+    - { registry_id: WS-SE-001, path: 16-systems-exchange/SYSTEMS-REGISTRY.yml }
