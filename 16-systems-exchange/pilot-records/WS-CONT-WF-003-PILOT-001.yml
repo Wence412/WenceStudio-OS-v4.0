@@ -27,7 +27,6 @@ gate_record:
   critical_failures:
     - "Retention and deletion control has not been exercised"
     - "Retention and deletion control is absent"
-    - "Rollback test result is absent"
   residual_risks:
     - "Draft may overstate supplied evidence if editorial review is bypassed"
   evidence:
@@ -56,12 +55,12 @@ gate_record:
       artifact: "16-systems-exchange/pilot-evidence/WS-CONT-WF-003-PILOT-001/normal-case-result.md"
       tested_on: "2026-08-20"
     - control_id: "G13"
-      status: "unverified"
-      artifact: "No containment and recovery exercise"
-      tested_on: null
+      status: "partial"
+      artifact: "16-systems-exchange/pilot-evidence/WS-CONT-WF-003-PILOT-001/rollback-test-result.md. Runtime containment remains unverified."
+      tested_on: "2026-08-20"
     - control_id: "G14"
       status: "partial"
-      artifact: "Normal-case plus missing-input, out-of-scope, and sensitive-data rejection tests passed. Rollback test pending."
+      artifact: "Normal-case plus missing-input, out-of-scope, and sensitive-data rejection tests passed. Rollback test passed. Runtime containment remains unverified."
       tested_on: "2026-08-20"
   decision: "development_ready"
   conditions:
