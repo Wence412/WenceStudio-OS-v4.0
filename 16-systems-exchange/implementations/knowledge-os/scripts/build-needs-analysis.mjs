@@ -1,0 +1,12 @@
+import { readFile, writeFile } from "node:fs/promises";
+import process from "node:process";
+const [inputPath, outputPath] = process.argv.slice(2);
+if (!inputPath || !outputPath) throw new Error("Usage: node build-needs-analysis.mjs <needs-input.json> <needs-analysis.md>");
+const input = JSON.parse(await readFile(inputPath, "utf8"));
+if (input.contains_personal_data) throw new Error("Use de-identified, approved inputs only.");
+if (!input.problem_statement || !Array.isArray(input.evidence) || !input.evidence.length) throw new Error("Provide a problem statement and at least one evidence item.");
+const evidence = input.evidence.filter(item => item.approved_for_use).map(item => `- ${item.type}: ${item.summary}`).join("\n");
+if (!evidence) throw new Error("No approved evidence items supplied.");
+const result = `# Training Needs Analysis\n\nStatus: Draft. Training-owner approval required.\n\n## Performance question\n${input.problem_statement}\n\n## Approved evidence\n${evidence}\n\n## Proposed analysis\n- Define the observable performance gap.\n- Separate skill, knowledge, process, tool, and environmental contributors.\n- Identify assumptions and evidence gaps before recommending training.\n\n## Review gates\n- Confirm data approval and de-identification.\n- Confirm no individual performance decisions are inferred.\n- Approve recommendations before distribution.\n`;
+await writeFile(outputPath, result);
+console.log("Needs analysis draft created.");
