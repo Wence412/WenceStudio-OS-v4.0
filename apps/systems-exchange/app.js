@@ -11,7 +11,9 @@ const dialog = document.querySelector("#systemDialog");
 const dialogClose = document.querySelector("#dialogClose");
 
 function listingLabel(value) {
-  return value === "internal_only" ? "Internal only" : "Hold";
+  if (value === "approved") return "Approved";
+  if (value === "internal_only") return "Internal only";
+  return "Hold";
 }
 function label(value) {
   return value.charAt(0).toUpperCase() + value.slice(1);
@@ -60,7 +62,9 @@ function showDetails(id) {
 function initializeCatalog(data) {
   systems = data.systems;
   const domains = [...new Set(systems.map(system => system.domain))].sort();
+  const listings = [...new Set(systems.map(system => system.listing))].sort();
   domains.forEach(domain => domainFilter.insertAdjacentHTML("beforeend", `<option value="${domain}">${domain}</option>`));
+  listings.forEach(listing => listingFilter.insertAdjacentHTML("beforeend", `<option value="${listing}">${listingLabel(listing)}</option>`));
   document.querySelector("#systemCount").textContent = systems.length;
   document.querySelector("#domainCount").textContent = domains.length;
   render();
