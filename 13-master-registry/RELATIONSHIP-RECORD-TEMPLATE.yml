@@ -1,0 +1,47 @@
+relationship_record:
+  asset_id: ""
+  workflow_family:
+    value: ""
+    status: "proposed | verified | unknown"
+    evidence: ""
+  lifecycle_phase:
+    value: ""
+    status: "proposed | verified | unknown"
+    evidence: ""
+  ecosystem_roles:
+    - role: ""
+      status: "blueprint | prototype | active | unknown"
+      evidence: ""
+  evaluator_id:
+    value: null
+    status: "verified | unknown"
+    evidence: ""
+  compliance_gate_id:
+    value: null
+    status: "verified | unknown"
+    evidence: ""
+  approval_record:
+    value: ""
+    status: "verified | partial | unknown"
+    evidence: ""
+  observability_artifact:
+    value: null
+    status: "verified | partial | unknown"
+    evidence: ""
+  rollback_artifact:
+    value: null
+    status: "verified | partial | unknown"
+    evidence: ""
+  implementation_state:
+    value: "BLUEPRINT | PROTOTYPE | ACTIVE | UNKNOWN"
+    status: "verified | proposed | unknown"
+    evidence: ""
+  canonical_location:
+    value: ""
+    status: "verified | partial | unknown"
+    evidence: ""
+  wil_relationship:
+    value: null
+    status: "verified | proposed | unknown"
+    evidence: ""
+  notes: ""
