@@ -13,13 +13,13 @@ if (registryIds.length !== relationshipIds.length || registryIds.some(id => !rel
 
 const records = relationships.split(/\n    - asset_id:/).slice(1).map(block => `asset_id:${block}`);
 for (const record of records) {
-  if (!/implementation_state:\s*\n\s+value:\s+(BLUEPRINT|PROTOTYPE|ACTIVE|UNKNOWN)/.test(record)) {
+  if (!/implementation_state:\s*(?:\n\s+value:\s+|\{\s*value:\s*)(BLUEPRINT|PROTOTYPE|ACTIVE|UNKNOWN)/.test(record)) {
     throw new Error("Every relationship record needs an implementation_state value.");
   }
-  if (!/canonical_location:\s*\n\s+value:\s+\"[^\"]+\"/.test(record)) {
+  if (!/canonical_location:\s*(?:\n\s+value:\s+|\{\s*value:\s*)\"[^\"]+\"/.test(record)) {
     throw new Error("Every relationship record needs a canonical_location value.");
   }
-  if (!/status:\s+(proposed|verified|unknown|partial)/.test(record)) {
+  if (!/status:\s+(?:proposed|verified|unknown|partial)/.test(record)) {
     throw new Error("Every relationship record needs evidence status fields.");
   }
 }
