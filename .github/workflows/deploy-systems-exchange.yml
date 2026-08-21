@@ -35,8 +35,10 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 24
-      - name: Generate catalog data
-        run: node scripts/build-systems-exchange.mjs apps/systems-exchange/data/systems.json
+      - name: Generate public-approved catalog data
+        run: node scripts/build-systems-exchange.mjs apps/systems-exchange/data/systems.json --public
+      - name: Validate public catalog boundary
+        run: node scripts/validate-public-systems-exchange.mjs apps/systems-exchange/data/systems.json
       - name: Prepare static site
         run: |
           mkdir -p _site

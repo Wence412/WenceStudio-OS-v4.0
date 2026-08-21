@@ -19,7 +19,7 @@ registry:
       data_classification: public
       external_actions: []
       human_approval_points: [Select topics and approve source use]
-      listing_status: HOLD
+      listing_status: APPROVED
     - asset_id: WS-CONT-AGT-002
       specification_path: 16-systems-exchange/systems/chronicle-evidence-verifier.yml
       title: Chronicle Evidence Verifier
@@ -33,7 +33,7 @@ registry:
       data_classification: public
       external_actions: []
       human_approval_points: [Approve final claims and citations]
-      listing_status: HOLD
+      listing_status: APPROVED
     - asset_id: WS-CONT-WF-003
       specification_path: 16-systems-exchange/systems/chronicle-issue-architect.yml
       title: Chronicle Issue Architect
@@ -145,7 +145,7 @@ registry:
       data_classification: public
       external_actions: []
       human_approval_points: [Approve outreach list and messages]
-      listing_status: HOLD
+      listing_status: APPROVED
     - asset_id: WS-BRAND-AGT-003
       specification_path: 16-systems-exchange/systems/brand-os-discovery.yml
       title: Brand OS Discovery Agent
