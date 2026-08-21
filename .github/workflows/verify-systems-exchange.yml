@@ -3,12 +3,14 @@ name: Verify Systems Exchange
 on:
   pull_request:
     paths:
+      - "13-master-registry/**"
       - "16-systems-exchange/**"
       - "scripts/**"
       - ".github/workflows/verify-systems-exchange.yml"
   push:
     branches: [main]
     paths:
+      - "13-master-registry/**"
       - "16-systems-exchange/**"
       - "scripts/**"
       - ".github/workflows/verify-systems-exchange.yml"
@@ -26,6 +28,8 @@ jobs:
           node-version: 24
       - name: Validate registry
         run: node scripts/validate-systems-exchange.mjs
+      - name: Validate ecosystem relationships
+        run: node scripts/validate-ecosystem-relationships.mjs
       - name: Run private prototype fixtures
         run: node scripts/run-private-prototype-checks.mjs
       - name: Build private catalog data
