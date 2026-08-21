@@ -28,5 +28,9 @@ jobs:
         run: node scripts/validate-systems-exchange.mjs
       - name: Run private prototype fixtures
         run: node scripts/run-private-prototype-checks.mjs
-      - name: Build catalog data
+      - name: Build private catalog data
         run: node scripts/build-systems-exchange.mjs apps/systems-exchange/data/systems.json
+      - name: Build public-approved catalog data
+        run: node scripts/build-systems-exchange.mjs apps/systems-exchange/data/public-systems.json --public
+      - name: Validate public catalog boundary
+        run: node scripts/validate-public-systems-exchange.mjs apps/systems-exchange/data/public-systems.json
