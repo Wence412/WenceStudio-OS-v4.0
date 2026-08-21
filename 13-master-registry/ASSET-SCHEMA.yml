@@ -29,6 +29,22 @@ asset_schema:
     - rollback_procedure
     - related_assets
     - change_log
+    - workflow_family
+    - lifecycle_phase
+    - ecosystem_roles
+    - evaluator_id
+    - compliance_gate_id
+    - approval_record
+    - observability_artifact
+    - rollback_artifact
+    - implementation_state
+    - canonical_location
+    - created
+    - updated
+    - review_date
+    - keywords
+    - summary
+    - wil_relationship
   permitted_statuses:
     - DRAFT
     - UNDER_REVIEW
@@ -37,6 +53,11 @@ asset_schema:
     - DEPRECATED
     - ARCHIVED
     - PENDING_CAPTURE
+  implementation_states:
+    - BLUEPRINT
+    - PROTOTYPE
+    - ACTIVE
+    - UNKNOWN
   risk_tiers:
     - low
     - moderate
