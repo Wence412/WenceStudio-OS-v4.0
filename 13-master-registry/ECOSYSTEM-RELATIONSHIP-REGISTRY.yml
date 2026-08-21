@@ -1,0 +1,173 @@
+relationship_registry:
+  registry_id: WS-REL-001
+  title: WenceStudio Ecosystem Relationship Registry
+  version: 0.1.0
+  status: PROPOSED
+  owner: WenceStudio Governance
+  last_reviewed: 2026-08-20
+  evidence_policy: Proposed mappings are not asset-status approvals. Verified values require direct artifacts.
+  records:
+    - asset_id: WS-CONT-WF-001
+      workflow_family: { value: Content Engine, status: proposed, evidence: "System title and Content OS domain" }
+      lifecycle_phase: { value: Intake, status: proposed, evidence: "Scheduled research-queue trigger" }
+      ecosystem_roles:
+        - { role: Research Agent, status: blueprint, evidence: "Notion ecosystem interface role list" }
+      evaluator_id: { value: null, status: unknown, evidence: "" }
+      compliance_gate_id: { value: null, status: unknown, evidence: "" }
+      approval_record: { value: "Select topics and approve source use", status: partial, evidence: "16-systems-exchange/SYSTEMS-REGISTRY.yml" }
+      observability_artifact: { value: null, status: unknown, evidence: "" }
+      rollback_artifact: { value: null, status: unknown, evidence: "" }
+      implementation_state: { value: PROTOTYPE, status: verified, evidence: "16-systems-exchange/IMPLEMENTATION-STATUS.md" }
+      canonical_location: { value: "16-systems-exchange/systems/chronicle-intelligence-monitor.yml", status: verified, evidence: "SYSTEMS-REGISTRY.yml" }
+      wil_relationship: { value: null, status: proposed, evidence: "WIL linkage required by Notion blueprint" }
+    - asset_id: WS-CONT-AGT-002
+      workflow_family: { value: Content Engine, status: proposed, evidence: "System title and Content OS domain" }
+      lifecycle_phase: { value: Validate, status: proposed, evidence: "Evidence verification function" }
+      ecosystem_roles:
+        - { role: Research Agent, status: blueprint, evidence: "Notion ecosystem interface role list" }
+        - { role: Evaluator Agent, status: blueprint, evidence: "Notion ecosystem interface role list" }
+      evaluator_id: { value: null, status: unknown, evidence: "" }
+      compliance_gate_id: { value: null, status: unknown, evidence: "" }
+      approval_record: { value: "Approve final claims and citations", status: partial, evidence: "16-systems-exchange/SYSTEMS-REGISTRY.yml" }
+      observability_artifact: { value: null, status: unknown, evidence: "" }
+      rollback_artifact: { value: null, status: unknown, evidence: "" }
+      implementation_state: { value: PROTOTYPE, status: verified, evidence: "16-systems-exchange/IMPLEMENTATION-STATUS.md" }
+      canonical_location: { value: "16-systems-exchange/systems/chronicle-evidence-verifier.yml", status: verified, evidence: "SYSTEMS-REGISTRY.yml" }
+      wil_relationship: { value: null, status: proposed, evidence: "WIL linkage required by Notion blueprint" }
+    - asset_id: WS-CONT-WF-003
+      workflow_family: { value: Content Engine, status: proposed, evidence: "Chronicle issue function" }
+      lifecycle_phase: { value: Produce, status: proposed, evidence: "Issue-brief generation function" }
+      ecosystem_roles:
+        - { role: Content Agent, status: blueprint, evidence: "Notion ecosystem interface role list" }
+        - { role: Evaluator Agent, status: blueprint, evidence: "Pilot test plan and issue-brief validation" }
+      evaluator_id: { value: null, status: unknown, evidence: "Pilot evidence exists but no stable evaluator asset ID" }
+      compliance_gate_id: { value: null, status: unknown, evidence: "" }
+      approval_record: { value: "Approve final issue and publication", status: partial, evidence: "SYSTEMS-REGISTRY.yml and pilot record" }
+      observability_artifact: { value: "16-systems-exchange/pilot-evidence/WS-CONT-WF-003-PILOT-001/normal-case-result.md", status: partial, evidence: "Pilot evidence register" }
+      rollback_artifact: { value: "16-systems-exchange/pilot-evidence/WS-CONT-WF-003-PILOT-001/rollback-test-result.md", status: verified, evidence: "Rollback test result" }
+      implementation_state: { value: PROTOTYPE, status: verified, evidence: "16-systems-exchange/IMPLEMENTATION-STATUS.md" }
+      canonical_location: { value: "16-systems-exchange/systems/chronicle-issue-architect.yml", status: verified, evidence: "SYSTEMS-REGISTRY.yml" }
+      wil_relationship: { value: null, status: proposed, evidence: "WIL linkage required by Notion blueprint" }
+    - asset_id: WS-CONT-WF-004
+      workflow_family: { value: Content Engine, status: proposed, evidence: "Multi-channel content function" }
+      lifecycle_phase: { value: Produce, status: proposed, evidence: "Repurposing function" }
+      ecosystem_roles:
+        - { role: Content Agent, status: blueprint, evidence: "Notion ecosystem interface role list" }
+        - { role: Visual and Design Agent, status: blueprint, evidence: "Visual brief output" }
+      evaluator_id: { value: null, status: unknown, evidence: "" }
+      compliance_gate_id: { value: null, status: unknown, evidence: "" }
+      approval_record: { value: "Approve each external post", status: partial, evidence: "SYSTEMS-REGISTRY.yml" }
+      observability_artifact: { value: null, status: unknown, evidence: "" }
+      rollback_artifact: { value: null, status: unknown, evidence: "" }
+      implementation_state: { value: PROTOTYPE, status: verified, evidence: "IMPLEMENTATION-STATUS.md" }
+      canonical_location: { value: "16-systems-exchange/systems/multi-channel-repurposing.yml", status: verified, evidence: "SYSTEMS-REGISTRY.yml" }
+      wil_relationship: { value: null, status: proposed, evidence: "WIL linkage required by Notion blueprint" }
+    - asset_id: WS-DESIGN-AGT-001
+      workflow_family: { value: Content Engine, status: proposed, evidence: "Visual direction supports content workflow" }
+      lifecycle_phase: { value: Produce, status: proposed, evidence: "Visual brief generation function" }
+      ecosystem_roles:
+        - { role: Visual and Design Agent, status: blueprint, evidence: "Notion ecosystem interface role list" }
+      evaluator_id: { value: null, status: unknown, evidence: "" }
+      compliance_gate_id: { value: null, status: unknown, evidence: "" }
+      approval_record: { value: "Approve final visual asset", status: partial, evidence: "SYSTEMS-REGISTRY.yml" }
+      observability_artifact: { value: null, status: unknown, evidence: "" }
+      rollback_artifact: { value: null, status: unknown, evidence: "" }
+      implementation_state: { value: PROTOTYPE, status: verified, evidence: "IMPLEMENTATION-STATUS.md" }
+      canonical_location: { value: "16-systems-exchange/systems/visual-direction-agent.yml", status: verified, evidence: "SYSTEMS-REGISTRY.yml" }
+      wil_relationship: { value: null, status: proposed, evidence: "WIL linkage required by Notion blueprint" }
+    - asset_id: WS-LEARN-AGT-001
+      workflow_family: { value: Client Delivery Engine, status: proposed, evidence: "Training needs analysis supports client or L&D delivery" }
+      lifecycle_phase: { value: Intake, status: proposed, evidence: "Needs-analysis function" }
+      ecosystem_roles:
+        - { role: Research Agent, status: blueprint, evidence: "Notion ecosystem interface role list" }
+        - { role: Strategy Agent, status: blueprint, evidence: "Needs diagnosis function" }
+      evaluator_id: { value: null, status: unknown, evidence: "" }
+      compliance_gate_id: { value: WS-GOV-AGT-002, status: proposed, evidence: "Training compliance gate is a related registered system" }
+      approval_record: { value: "Approve data use and recommendations", status: partial, evidence: "SYSTEMS-REGISTRY.yml" }
+      observability_artifact: { value: null, status: unknown, evidence: "" }
+      rollback_artifact: { value: null, status: unknown, evidence: "" }
+      implementation_state: { value: PROTOTYPE, status: verified, evidence: "IMPLEMENTATION-STATUS.md" }
+      canonical_location: { value: "16-systems-exchange/systems/training-needs-analysis-agent.yml", status: verified, evidence: "SYSTEMS-REGISTRY.yml" }
+      wil_relationship: { value: null, status: proposed, evidence: "WIL linkage required by Notion blueprint" }
+    - asset_id: WS-LEARN-WF-002
+      workflow_family: { value: Client Delivery Engine, status: proposed, evidence: "Learning design deliverable" }
+      lifecycle_phase: { value: Produce, status: proposed, evidence: "Module architecture function" }
+      ecosystem_roles:
+        - { role: Strategy Agent, status: blueprint, evidence: "Notion ecosystem interface role list" }
+        - { role: Build Agent, status: blueprint, evidence: "Blueprint generation function" }
+      evaluator_id: { value: null, status: unknown, evidence: "" }
+      compliance_gate_id: { value: WS-GOV-AGT-002, status: proposed, evidence: "Training compliance gate is a related registered system" }
+      approval_record: { value: "Approve learning design and compliance requirements", status: partial, evidence: "SYSTEMS-REGISTRY.yml" }
+      observability_artifact: { value: null, status: unknown, evidence: "" }
+      rollback_artifact: { value: null, status: unknown, evidence: "" }
+      implementation_state: { value: PROTOTYPE, status: verified, evidence: "IMPLEMENTATION-STATUS.md" }
+      canonical_location: { value: "16-systems-exchange/systems/learning-module-architect.yml", status: verified, evidence: "SYSTEMS-REGISTRY.yml" }
+      wil_relationship: { value: null, status: proposed, evidence: "WIL linkage required by Notion blueprint" }
+    - asset_id: WS-LEARN-WF-003
+      workflow_family: { value: Client Delivery Engine, status: proposed, evidence: "Training feedback improvement workflow" }
+      lifecycle_phase: { value: Learn, status: proposed, evidence: "Feedback themes and improvement function" }
+      ecosystem_roles:
+        - { role: Analytics and Learning Agent, status: blueprint, evidence: "Notion ecosystem interface role list" }
+      evaluator_id: { value: null, status: unknown, evidence: "" }
+      compliance_gate_id: { value: WS-GOV-AGT-002, status: proposed, evidence: "Training compliance gate is a related registered system" }
+      approval_record: { value: "Approve distribution and recommendations", status: partial, evidence: "SYSTEMS-REGISTRY.yml" }
+      observability_artifact: { value: null, status: unknown, evidence: "" }
+      rollback_artifact: { value: null, status: unknown, evidence: "" }
+      implementation_state: { value: PROTOTYPE, status: verified, evidence: "IMPLEMENTATION-STATUS.md" }
+      canonical_location: { value: "16-systems-exchange/systems/training-feedback-intelligence.yml", status: verified, evidence: "SYSTEMS-REGISTRY.yml" }
+      wil_relationship: { value: null, status: proposed, evidence: "WIL linkage required by Notion blueprint" }
+    - asset_id: WS-GOV-AGT-002
+      workflow_family: { value: Client Delivery Engine, status: proposed, evidence: "Pre-release compliance review function" }
+      lifecycle_phase: { value: Approve, status: proposed, evidence: "Compliance gate function" }
+      ecosystem_roles:
+        - { role: Compliance and Risk Agent, status: blueprint, evidence: "Notion ecosystem interface role list" }
+      evaluator_id: { value: null, status: unknown, evidence: "" }
+      compliance_gate_id: { value: WS-GOV-AGT-002, status: verified, evidence: "Self-identified compliance review gate" }
+      approval_record: { value: "Approve release or exception", status: partial, evidence: "SYSTEMS-REGISTRY.yml" }
+      observability_artifact: { value: null, status: unknown, evidence: "" }
+      rollback_artifact: { value: null, status: unknown, evidence: "" }
+      implementation_state: { value: PROTOTYPE, status: verified, evidence: "IMPLEMENTATION-STATUS.md" }
+      canonical_location: { value: "16-systems-exchange/systems/training-compliance-review-gate.yml", status: verified, evidence: "SYSTEMS-REGISTRY.yml" }
+      wil_relationship: { value: null, status: proposed, evidence: "WIL linkage required by Notion blueprint" }
+    - asset_id: WS-SALES-WF-001
+      workflow_family: { value: Growth Engine, status: proposed, evidence: "Prospect research and qualification function" }
+      lifecycle_phase: { value: Intake, status: proposed, evidence: "Qualification function" }
+      ecosystem_roles:
+        - { role: Research Agent, status: blueprint, evidence: "Notion ecosystem interface role list" }
+        - { role: Strategy Agent, status: blueprint, evidence: "Fit scoring and qualification" }
+      evaluator_id: { value: null, status: unknown, evidence: "" }
+      compliance_gate_id: { value: null, status: unknown, evidence: "" }
+      approval_record: { value: "Approve outreach list and messages", status: partial, evidence: "SYSTEMS-REGISTRY.yml" }
+      observability_artifact: { value: null, status: unknown, evidence: "" }
+      rollback_artifact: { value: null, status: unknown, evidence: "" }
+      implementation_state: { value: PROTOTYPE, status: verified, evidence: "IMPLEMENTATION-STATUS.md" }
+      canonical_location: { value: "16-systems-exchange/systems/icp-research-qualification.yml", status: verified, evidence: "SYSTEMS-REGISTRY.yml" }
+      wil_relationship: { value: null, status: proposed, evidence: "WIL linkage required by Notion blueprint" }
+    - asset_id: WS-BRAND-AGT-003
+      workflow_family: { value: Client Delivery Engine, status: proposed, evidence: "Brand discovery for client engagement" }
+      lifecycle_phase: { value: Intake, status: proposed, evidence: "Discovery function" }
+      ecosystem_roles:
+        - { role: Intake and Context Agent, status: blueprint, evidence: "Notion ecosystem interface role list" }
+        - { role: Strategy Agent, status: blueprint, evidence: "Brand-system diagnosis function" }
+      evaluator_id: { value: null, status: unknown, evidence: "" }
+      compliance_gate_id: { value: null, status: unknown, evidence: "" }
+      approval_record: { value: "Approve client-facing scope", status: partial, evidence: "SYSTEMS-REGISTRY.yml" }
+      observability_artifact: { value: null, status: unknown, evidence: "" }
+      rollback_artifact: { value: null, status: unknown, evidence: "" }
+      implementation_state: { value: PROTOTYPE, status: verified, evidence: "IMPLEMENTATION-STATUS.md" }
+      canonical_location: { value: "16-systems-exchange/systems/brand-os-discovery.yml", status: verified, evidence: "SYSTEMS-REGISTRY.yml" }
+      wil_relationship: { value: null, status: proposed, evidence: "WIL linkage required by Notion blueprint" }
+    - asset_id: WS-DELIVERY-WF-001
+      workflow_family: { value: Client Delivery Engine, status: proposed, evidence: "Client onboarding function" }
+      lifecycle_phase: { value: Intake, status: proposed, evidence: "Onboarding function" }
+      ecosystem_roles:
+        - { role: Intake and Context Agent, status: blueprint, evidence: "Notion ecosystem interface role list" }
+        - { role: Planner Agent, status: blueprint, evidence: "Milestones and responsibilities output" }
+      evaluator_id: { value: null, status: unknown, evidence: "" }
+      compliance_gate_id: { value: null, status: unknown, evidence: "" }
+      approval_record: { value: "Approve client communication and project activation", status: partial, evidence: "SYSTEMS-REGISTRY.yml" }
+      observability_artifact: { value: null, status: unknown, evidence: "" }
+      rollback_artifact: { value: null, status: unknown, evidence: "" }
+      implementation_state: { value: PROTOTYPE, status: verified, evidence: "IMPLEMENTATION-STATUS.md" }
+      canonical_location: { value: "16-systems-exchange/systems/client-onboarding-orchestrator.yml", status: verified, evidence: "SYSTEMS-REGISTRY.yml" }
+      wil_relationship: { value: null, status: proposed, evidence: "WIL linkage required by Notion blueprint" }
